@@ -1,0 +1,21 @@
+{
+    "name": "gerke/imagetotext",
+    "autoload": {
+        "psr-4": {
+            "Gerke\\Imagetotext\\": "php/oop/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BarnaBea",
+            "email": "tmintbea@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/pdf-to-image": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "mockery/mockery": "^1.6"
+    }
+}

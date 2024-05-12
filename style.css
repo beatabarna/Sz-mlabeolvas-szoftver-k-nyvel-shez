@@ -1,0 +1,215 @@
+body {
+  background-color: #163020 !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login,
+.reg {
+  background-image: url('images/loginbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  width: 600px !important;
+}
+
+#ceg {
+  cursor: pointer;
+  width: 70%;
+}
+
+.selected-option {
+  background-color: green !important;
+  color: white !important;
+}
+
+p.login,
+p.reg {
+  font-size: smaller;
+  color: rgb(0, 77, 19);
+  margin-top: 50px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-variant: small-caps;
+}
+
+h2 {
+  margin-top: 25px !important;
+}
+
+.banks {
+  border-color: black !important;
+}
+
+.banks:focus {
+  border-color: black !important;
+  box-shadow: none;
+}
+
+.bank option:hover {
+  background-color: green;
+  color: white;
+}
+
+input[type=text] {
+  border: 1px solid rgb(0, 77, 19);
+  width: 400px;
+  margin: auto;
+}
+
+input[type=number] {
+  border: 1px solid rgb(0, 77, 19);
+  width: 400px;
+  margin: auto;
+}
+
+input[type=email] {
+  border: 1px solid rgb(0, 77, 19);
+  width: 400px;
+  margin: auto;
+}
+
+input[type=password] {
+  border: 1px solid rgb(0, 77, 19);
+  width: 400px;
+  margin: auto;
+}
+
+input[type=text]:focus {
+  border: none;
+  border-bottom: 1px solid rgb(0, 77, 19);
+  box-shadow: 2px 2px 5px;
+}
+
+input[type=number]:focus {
+  border: none;
+  border-bottom: 1px solid rgb(0, 77, 19);
+  box-shadow: 2px 2px 5px;
+}
+
+input[type=password]:focus {
+  border: none;
+  border-bottom: 1px solid rgb(0, 77, 19);
+  box-shadow: 2px 2px 5px;
+}
+
+input[type=email]:focus {
+  border: none;
+  border-bottom: 1px solid rgb(0, 77, 19);
+  box-shadow: 2px 2px 5px;
+}
+
+.listainput input[type=text] {
+  border: none;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid greenyellow;
+  background-color: rgb(108, 117, 125);
+  color: white;
+  padding: 0;
+}
+
+.listainput input[type=text]:focus {
+  border: none;
+  border-bottom: 1px solid orange;
+  box-shadow: 0;
+
+}
+
+label {
+  color: rgb(0, 0, 0);
+}
+
+.te label {
+  color: white;
+}
+
+.card, .card li{
+  background-color: #EEF0E5 !important;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.card li:hover {
+  background-color: #B6C4B6 !important;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.loginbutton {
+  margin-top: 125px !important;
+}
+
+.regbutton {
+  margin-top: 70px !important;
+}
+
+.navbar a:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  -webkit-box-shadow: 7px 4px 14px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 4px 14px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 4px 14px -3px rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
+}
+
+.content {
+  background-color: rgb(224, 225, 220);
+}
+
+.invoiceregistration input {
+  width: 100%;
+}
+
+/* .clientinvoice {
+  background-image: url('images/invoicebg.jpg');
+} */
+
+.listitem {
+  padding: 2.5px 0 2.5px 10px;
+  background: #eeeeee;
+}
+
+.listitem:hover {
+  background: rgb(0, 77, 19);
+  color: rgb(255, 255, 255);
+}
+
+tr.totalInValue {
+  background-color: rgb(108, 117, 125) !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.focsoport {
+  font-weight: bold;
+}
+
+.csoport {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tetel {
+  font-size: 15px;
+}
+
+.active_button {
+  border: 1px solid greenyellow !important;
+}
