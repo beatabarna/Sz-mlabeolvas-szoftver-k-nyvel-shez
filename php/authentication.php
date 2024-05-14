@@ -31,6 +31,8 @@ if (isset($_POST['data'])) {
                     if ($result[0]["utolso_belepes"] == "0000-00-00") {
                         echo "psw";
                     } else {
+                        $_SESSION["cegnev"] = "";
+                        $_SESSION["cegadoszam"] = "Nincs cég kiválasztva!";
                         echo "ok";
                     }
                 }else{

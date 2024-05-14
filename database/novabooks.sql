@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Máj 12. 17:09
+-- Létrehozás ideje: 2024. Máj 14. 20:27
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -60,8 +60,8 @@ CREATE TABLE `ceg` (
 --
 
 INSERT INTO `ceg` (`adoszam`, `nev`, `elerhetoseg`, `cim`, `afabevallas`, `felhasznalo_id`) VALUES
-('12345678-2-22', 'GreenTech Innovations Kft.', '06305467895', '1172,Budapest,Kacsa utca 23', 'negyedeves', 1),
-('12554896-2-25', 'Alma Kft', '0630/5628-963', '6723,Szeged,Csaba utca 36.', 'havi', 1);
+('12554896-2-25', 'Alma Kft', '0630/5628-963', '6723,Szeged,Csaba utca 36.', 'havi', 1),
+('52221478-2-25', 'Napfény Kft.', '0630/542-3398', '1023,Budapest,Széchenyi utca 12', 'havi', 1);
 
 -- --------------------------------------------------------
 
@@ -110,9 +110,8 @@ CREATE TABLE `felhasznalo` (
 --
 
 INSERT INTO `felhasznalo` (`id`, `nev`, `email`, `jelszo`, `utolso_belepes`, `admin`, `aktiv`) VALUES
-(1, 'Barna Bea', 'barnabea@novabooks.com', '$2y$10$7sid5lbbJK6eGXI4g694oe5Ava52C2e9BfvmTKqZYVPqiwvrXYZse', '2024-05-07', 1, 1),
-(2, 'teszt név', 'tesztnev@novabooks.com', '$2y$10$B.e5vnEeK5PP55N7KH.4HevrAXdHdQafacM1uI9MIi8U5Kz70Nlx2', '2024-04-13', 0, 0),
-(4, 'teszt név3', 'tesztnev3@novabooks.com', '$2y$10$4mb0/nF2lnQYZYM7H6lgNOEC.HuM7clC.xYuNLCMX8iw3Fwk.NvEu', '2024-05-04', 0, 0);
+(1, 'Barna Bea', 'barnabea@novabooks.com', '$2y$10$7sid5lbbJK6eGXI4g694oe5Ava52C2e9BfvmTKqZYVPqiwvrXYZse', '2024-05-14', 1, 1),
+(5, 'Kiss Gréta', 'kissgreta@novabooks.com', '$2y$10$o5ffaeowSyTSYXsmXkqS4uPk8GvB5f0t2ZFuA5KAR9wLo5oOPpP8W', '2024-01-18', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -199,7 +198,13 @@ INSERT INTO `konyvelesi_tetel` (`id`, `datum`, `tartozik`, `kovetel`, `osszeg`, 
 (351, '2023-03-31', 471, 463, 15000, NULL, NULL, NULL, 13, 1),
 (352, '2023-03-31', 471, 463, 20000, NULL, NULL, NULL, 13, 1),
 (353, '2023-03-02', 381, 389, 577601, NULL, 9, NULL, NULL, 1),
-(354, '2023-01-01', 384, 491, 1155202, NULL, NULL, NULL, 14, 1);
+(354, '2023-01-01', 384, 491, 1155202, NULL, NULL, NULL, 14, 1),
+(355, '2024-03-10', 5113, 454, 23000, NULL, NULL, '634852/2024-552', NULL, 1),
+(356, '2023-01-12', 384, 389, 15000, '22568974-22156638-00024877', NULL, NULL, NULL, 1),
+(357, '2023-01-12', 529, 384, 590, '22568974-22156638-00024877', NULL, NULL, NULL, 1),
+(358, '2023-01-14', 529, 384, 450, '22568974-22156638-00024877', NULL, NULL, NULL, 1),
+(359, '2023-01-24', 539, 384, 292, '22568974-22156638-00024877', NULL, NULL, NULL, 1),
+(360, '2024-02-13', 389, 381, 15000, NULL, 10, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -260,7 +265,8 @@ CREATE TABLE `penztar` (
 --
 
 INSERT INTO `penztar` (`id`, `datum`, `megjegyzes`, `ceg_adoszam`) VALUES
-(9, '2023-03-02', '', '12554896-2-25');
+(9, '2023-03-02', '', '12554896-2-25'),
+(10, '2024-02-13', 'átvezetés', '12554896-2-25');
 
 -- --------------------------------------------------------
 
@@ -318,6 +324,7 @@ INSERT INTO `szamla` (`szamlaszam`, `teljesites`, `fizhat`, `kiallitas`, `partne
 ('2023/63325194E', '2023-06-28', '2023-07-28', '2023-06-06', '12175128-2-44', 0, '', '../invoices/szallito/12554896-2-25/net6.pdf', 0, '12554896-2-25'),
 ('2023/85263971 E', '2023-08-28', '2023-09-28', '2023-08-06', '12175128-2-44', 0, '', '../invoices/szallito/12554896-2-25/net8.pdf', 0, '12554896-2-25'),
 ('5122693/2024', '2024-01-03', '2024-01-15', '2024-01-05', '15587968-2-26', 0, '', NULL, 0, '12554896-2-25'),
+('634852/2024-552', '2024-03-10', '2024-03-25', '2024-03-15', '15587968-2-26', 0, '', NULL, 0, '12554896-2-25'),
 ('GE/2023-91360', '2023-03-11', '2023-03-28', '2023-03-06', '15887996-2-26', 0, '', '../invoices/vevo/12554896-2-25/03.pdf', 0, '12554896-2-25'),
 ('MM/2023/25587999', '2023-02-13', '2023-02-25', '2023-02-12', '15487458-2-44', 0, '5db MSI G2412F LED monitor', NULL, 0, '12554896-2-25'),
 ('SZA/2024-5554789', '2024-02-03', '2024-02-15', '2024-02-01', '32554189-2-26', 0, '', NULL, 0, '12554896-2-25'),
@@ -448,19 +455,19 @@ ALTER TABLE `egyeb`
 -- AUTO_INCREMENT a táblához `felhasznalo`
 --
 ALTER TABLE `felhasznalo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `konyvelesi_tetel`
 --
 ALTER TABLE `konyvelesi_tetel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=355;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=361;
 
 --
 -- AUTO_INCREMENT a táblához `penztar`
 --
 ALTER TABLE `penztar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `targyi_eszkoz`
